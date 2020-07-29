@@ -26,10 +26,10 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: DB Setup
-      run: >
-        sh -c "python manage.py makemigrations authentication &&
-             python manage.py migrate &&
-             python manage.py shell -c 'from authentication.models import CustomUser;CustomUser.objects.create_user(email=\"im@paroham.in\",first_name=\"im\", last_name=\"parham\", level=\"AD\",password=\"dr0w.Ssap\") if not CustomUser.objects.filter(email=\"im@paroham.in\").exists() else print(\"exists\")' &&
+      run: |
+        python manage.py makemigrations authentication
+        python manage.py migrate
+        python manage.py shell -c 'from authentication.models import CustomUser;CustomUser.objects.create_user(email=\"im@paroham.in\",first_name=\"im\", last_name=\"parham\", level=\"AD\",password=\"dr0w.Ssap\") if not CustomUser.objects.filter(email=\"im@paroham.in\").exists() else print(\"exists\")' &&
              #python src/manage.py shell -c 'from authentication.models import CustomUser;a=CustomUser.objects.get(email=\"im@paroham.in\");print(\"email-im@paroham.in password-dr0w.Ssap\") if a.email ==\"im@paroham.in\" else CustomUser.objects.create_user(email=\"im@paroham.in\",first_name=\"im\", last_name=\"parham\", level=\"AD\",password=\"dr0w.Ssap\")' &&
      
     - name: Lint with flake8
