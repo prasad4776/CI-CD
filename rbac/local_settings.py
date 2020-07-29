@@ -81,13 +81,9 @@ WSGI_APPLICATION = "rbac.wsgi.application"
 
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.getenv('TEST_DB_NAME'),
-        "USER": os.getenv('TEST_DB_USER'),
-        "PASSWORD": os.getenv('TEST_DB_PASSWORD'),
-        "HOST": os.getenv('TEST_DB_HOST'),
-        "PORT": "",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
