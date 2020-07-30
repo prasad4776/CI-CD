@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  db:
     # You must use a Linux environment when using service containers or container jobs
     runs-on: ubuntu-latest
 
@@ -32,7 +32,7 @@ jobs:
         ports:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
-  prasad:
+  build:
     
     runs-on: ubuntu-latest
 
