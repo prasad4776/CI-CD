@@ -27,10 +27,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: DB SETTINGS
       run: |
-         sh -c "sudo -i -u postgres psql;
-         CREATE DATABASE test_database;
-         CREATE USER test WITH PASSWORD 'test';
-         GRANT ALL ON DATABASE test_database TO test;"
+         sh -c "sudo -i -u postgres psql;CREATE DATABASE test_database;CREATE USER test WITH PASSWORD 'test';GRANT ALL ON DATABASE test_database TO test;"
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
