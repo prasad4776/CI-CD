@@ -27,7 +27,7 @@ SECRET_KEY = "r2xw(uim146&)+j-2m3c&953ydvkl^5h+qtwf!7f6j!8!=ni9o"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['safe-brook-95629.herokuapp.com','127.0.0.1']
 
 # Application definition
 
@@ -140,4 +140,6 @@ DJOSER = {
     },
 }
 
-STATIC_ROOT = "/var/www/example.com/static/"
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
