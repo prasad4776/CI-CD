@@ -139,3 +139,4 @@ DJOSER = {
         "user_list": ["authentication.permissions.IsAdmin"],
     },
 }
+

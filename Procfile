@@ -1,1 +1,1 @@
-web gunicorn --pythonpath RBAC app:app
+web: gunicorn rbac.wsgi
