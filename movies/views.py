@@ -71,4 +71,4 @@ class FilmView(APIView):
 
 
 def home(request):
-    return HttpResponse('Hello World!')
+    return HttpResponse('Hello 123!')
