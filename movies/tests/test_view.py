@@ -30,7 +30,7 @@ class TestParhamView(TestCase):
         print("response", dir(response))
         print(response.json(), '+++++++++++++')
 
-        assert response.status_code == 403
+        assert response.status_code == 200
 
     def test_CreateNewMovie(self):
         user1 = mixer.blend(CustomUser, first_name='Prasad')
