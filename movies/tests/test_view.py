@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.urls import reverse
 from mixer.backend.django import mixer
 from rest_framework.test import APIClient
-from movies.models import Movie
+# from movies.models import Movie
 
 pytestmark = pytest.mark.django_db
 
