@@ -81,3 +81,11 @@ class TestParhamView(TestCase):
         response = self.client.put(url, )
         print("response", dir(response))
         assert response.status_code == 400
+
+    def test_deleteAMovie(self):
+        user1 = mixer.blend(Movie, )
+        url = reverse('delete-movie', kwargs={'pk': user1.id})
+        print("url", url)
+        response = self.client.delete(url)
+        print("response", dir(response))
+        assert response.status_code == 204
