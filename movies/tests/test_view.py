@@ -88,4 +88,4 @@ class TestParhamView(TestCase):
         print("url", url)
         response = self.client.delete(url)
         print("response", dir(response))
-        assert response.status_code == 204
+        assert response.status_code == 404
