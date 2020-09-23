@@ -37,6 +37,7 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v2
         with:
+          id: cache-pip 
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
