@@ -82,7 +82,6 @@ jobs:
       - name: Set up black
         run: |
           ls
-          pip install --force-reinstall pytest flake8 black
           black .
 #         uses: psf/black@stable
       - name: Test with pytest
