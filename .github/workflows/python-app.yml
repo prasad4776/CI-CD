@@ -68,7 +68,7 @@ jobs:
 #           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Set up black
         run: |
-          pip install black
+          ls
           black .
 #         uses: psf/black@stable
       - name: Test with pytest
