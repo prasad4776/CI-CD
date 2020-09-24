@@ -55,7 +55,10 @@ jobs:
         run: ls -R ${{ env.pythonLocation}}
      
       - name: show module
-        run: pip show pandas
+        run: |
+          pip show flake8
+          pip show black
+
         
       - name: Lint with flake8
         run: |
