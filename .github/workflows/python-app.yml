@@ -61,13 +61,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: ls show env.pythonLocation
-        run: ls -R ${{ env.pythonLocation}}
+#       - name: ls show env.pythonLocation
+#         run: ls -R ${{ env.pythonLocation}}
      
-      - name: show module
-        run: |
-          pip show flake8
-          pip show black
+#       - name: show module
+#         run: |
+#           pip show flake8
+#           pip show black
 
         
       - name: Lint with flake8
