@@ -57,7 +57,7 @@ jobs:
       - name: Set up black
         run: |
           pip install black
-          black --check .
+          black .
 #         uses: psf/black@stable
       - name: Test with pytest
         run: |
