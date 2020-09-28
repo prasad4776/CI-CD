@@ -60,8 +60,8 @@ jobs:
           pip show flake8
           pip show black
           
-      - name: Python Lint (isort/black)
-        uses: wrboyce/python-lint-action@v1.0.0
+#       - name: Python Lint (isort/black)
+#         uses: wrboyce/python-lint-action@v1.0.0
           
 #       - name: isort w b
 #       - name: Python linting
@@ -74,10 +74,10 @@ jobs:
           
 
           
-#       - name: isort
-#         run: |
-#           pip install isort
-#           isort .
+      - name: isort
+        run: |
+          pip install isort
+          isort .
         
       - name: Lint with flake8
         run: |
