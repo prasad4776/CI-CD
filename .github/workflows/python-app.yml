@@ -61,7 +61,8 @@ jobs:
           pip show black
           
       - name: isort w b
-        uses : "wrboyce/python-lint-action@master"
+#         uses : "wrboyce/python-lint-action@master"
+        uses:  "bulv1ne/python-style-check@master"
           
           
 
