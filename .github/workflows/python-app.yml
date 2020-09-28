@@ -60,6 +60,9 @@ jobs:
           pip show flake8
           pip show black
           
+      - name: isort w b
+        uses : "wrboyce/python-lint-action@master"
+          
           
 
           
