@@ -60,10 +60,16 @@ jobs:
           pip show flake8
           pip show black
           
-      - name: isort
-        run: |
-          pip install isort
-          isort .
+          
+      - name: Run isort
+        uses: olance/isort-action@v1.0.0
+        with:
+          args: .
+          
+#       - name: isort
+#         run: |
+#           pip install isort
+#           isort .
         
       - name: Lint with flake8
         run: |
