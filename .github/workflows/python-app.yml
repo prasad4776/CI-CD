@@ -60,10 +60,14 @@ jobs:
           pip show flake8
           pip show black
           
-      - name: isort w b
-#         uses : "wrboyce/python-lint-action@master"
-        uses:  "bulv1ne/python-style-check@master"
-          
+#       - name: isort w b
+      - name: Python linting
+        uses: actions/checkout@master
+      - name: Konstruktoid Python linting
+        uses: konstruktoid/action-pylint@master
+    #         uses : "wrboyce/python-lint-action@master"
+#             uses:  "bulv1ne/python-style-check@master"
+
           
 
           
