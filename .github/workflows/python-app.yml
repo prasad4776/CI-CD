@@ -75,7 +75,7 @@ jobs:
           ls
           black .
 #         uses: psf/black@stable
-      - name: Test with pytest
+      - name: Test with pytest.
         run: |
           pytest
           
