@@ -59,7 +59,11 @@ jobs:
         run: |
           pip show flake8
           pip show black
-
+          
+      - name: isort
+        run: |
+          pip install isort
+          isort .
         
       - name: Lint with flake8
         run: |
