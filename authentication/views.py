@@ -1,9 +1,11 @@
-from .models import CustomUser as User
-from .serializers import CustomUserSerializer
-from .permissions import IsAdmin
-from rest_framework.generics import UpdateAPIView, ListAPIView, CreateAPIView
-from rest_framework.response import Response
 import json
+
+from rest_framework.generics import CreateAPIView, ListAPIView, UpdateAPIView
+from rest_framework.response import Response
+
+from .models import CustomUser as User
+from .permissions import IsAdmin
+from .serializers import CustomUserSerializer
 
 
 class AllUsers(ListAPIView, CreateAPIView):
