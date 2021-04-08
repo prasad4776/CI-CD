@@ -10,7 +10,7 @@ chardet==3.0.4
 click==7.1.2
 coverage==5.1
 distlib==0.3.0
-Django==2.2.13
+Django==2.2.20
 django-discover-runner==1.0
 django-prbac==0.0.8
 django-role-permissions==3.0.0
